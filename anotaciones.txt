@@ -1,0 +1,17 @@
+Parte 1
+A) Tipologías:
+El dataset es una tabla de items y atributos
+Atributos: categóricos: género, nacionalidad, status, ocupacion, 
+           ordinales: anio_mision, edad_mision, anio_nacimiento
+           cuantitativos: mision_hs, eva_mision_hs
+Ítem: nombre
+
+B) marca: dot
+   propiedad: mision_hs
+   canal: posicion 
+
+   marca: dot
+   propiedad: género
+   canal: color
+
+   mm nose
