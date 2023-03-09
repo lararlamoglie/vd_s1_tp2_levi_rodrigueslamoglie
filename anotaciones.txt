@@ -6,12 +6,38 @@ Atributos: categóricos: género, nacionalidad, status, ocupacion,
            cuantitativos: mision_hs, eva_mision_hs
 Ítem: nombre
 
-B) marca: dot
-   propiedad: mision_hs
-   canal: posicion 
+B) 
+Ejemplo 1: 
+marca: barras horizontales
+propiedad: mision hrs
+canal: tamaño
 
-   marca: dot
-   propiedad: género
-   canal: color
+Se podría utilizar la misma marca para otra propiedad con otro 
+canal pero nos parece que no es una forma clara de representar datos, ya que puede resultar 
+confuso. Si se puede visualizar otra prpiedad agregando una marca. Por ejemplo, 
+agregando una curva conservando los valores de un grafico. 
 
-   mm nose
+C) Si, la visualizacion funciona de forma eficaz y es clara ya que logra representar los datos necesarios correctamente. 
+
+Ejemplo 2:
+marca: dot
+propiedad: mision hrs
+canal: posición
+
+D) 
+
+Ejemplo 3: 
+marca: barras verticales
+propiedad: pais
+canal: tamaño 
+
+Ejemplo 4:
+marca: dot
+propiedad: pais
+canal: tamaño
+
+
+
+
+
+
