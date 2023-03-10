@@ -1,4 +1,4 @@
-Parte 1
+Parte 69
 A) Tipologías:
 El dataset es una tabla de items y atributos
 Atributos: categóricos: género, nacionalidad, status, ocupacion, 
@@ -13,7 +13,7 @@ propiedad: mision hrs
 canal: tamaño
 
 Se podría utilizar la misma marca para otra propiedad con otro 
-canal pero nos parece que no es una forma clara de representar datos, ya que puede resultar 
+canal en un grafico pero nos parece que no es una forma clara de representar datos, ya que puede resultar 
 confuso. Si se puede visualizar otra prpiedad agregando una marca. Por ejemplo, 
 agregando una curva conservando los valores de un grafico. 
 
@@ -28,13 +28,13 @@ D)
 
 Ejemplo 3: 
 marca: barras verticales
-propiedad: pais
+propiedad: nacionalidad
 canal: tamaño 
 
 Ejemplo 4:
 marca: dot
-propiedad: pais
-canal: tamaño
+propiedad: nacionalidad
+canal: posición
 
 
 
