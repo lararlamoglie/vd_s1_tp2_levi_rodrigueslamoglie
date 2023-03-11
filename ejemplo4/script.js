@@ -4,13 +4,12 @@ d3.csv('./astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
     marks: [ //marcas del plot
       Plot.dot(data, { //elijo la marca punto para representar cada identidad
-        x: 'nacionalidad', 
-        y: 'mision_hs',
-        fill: 'genero',
+        x: 'edad_mision', 
+        r: 'eva_mision_hs',
       }),
     ],
-    width: 1100,
-    height: 300,
+    width: 5000,
+    height: 100,
     marginLeft: 150,
     line: false,
     nice: true,

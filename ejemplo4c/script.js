@@ -1,24 +1,20 @@
-d3.csv('astronautas.csv', d3.autoType).then(data => {
+d3.csv('./astronautas.csv', d3.autoType).then(data => {
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
-
     marks: [ //marcas del plot
       Plot.barY(data, { //elijo la marca punto para representar cada identidad
-        x: 'nacionalidad', 
+        x: 'edad_mision', 
         y: 'eva_mision_hs',
-        fill: 'nacionalidad',
-        stroke: 'nacionalidad',
-        sort: 'nacionalidad',
+        fill: 'status',
+        sort: 'status',
+        stroke: 'status',
       }),
     ],
-    x: {
-      domain: d3.sort(data, (a, b) => d3.descending(a.eva_mision_hs, b.eva_mision_hs)).map(d => d.nacionalidad),
-    },
-    width: 1500,
-    height: 300,
+    width: 5000,
+    height: 500,
     marginLeft: 150,
-    line: true,
+    line: false,
     nice: true,
     zero: true,
     grid: true,
