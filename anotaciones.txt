@@ -1,4 +1,4 @@
-Parte 1
+Parte 69
 A) Tipologías:
 El dataset es una tabla de items y atributos
 Atributos: categóricos: género, nacionalidad, status, ocupacion, 
@@ -6,38 +6,59 @@ Atributos: categóricos: género, nacionalidad, status, ocupacion,
            cuantitativos: mision_hs, eva_mision_hs
 Ítem: nombre
 
-B) 
+------
+An item is an individual entity that is discrete, such as a row in a simple table or a nod
+An attribute is some specific property that can be measured, observed, or logged.
+------
+
+B) y C)
 Ejemplo 1: 
-marca: barras horizontales
-propiedad: mision hrs
-canal: tamaño
+marca: líneas (barras horizontales)
+atributo: mision hrs
+canal: tamaño y posicion horizontal 
 
-Se podría utilizar la misma marca para otra propiedad con otro 
-canal pero nos parece que no es una forma clara de representar datos, ya que puede resultar 
-confuso. Si se puede visualizar otra prpiedad agregando una marca. Por ejemplo, 
-agregando una curva conservando los valores de un grafico. 
+En el mismo gráfico visualizamos el atributo 'ocupación', denuevo con la marca línea, pero el canal posicion vertical, y color
+No tendría sentido agregar otra marca para visualizar otro atributo, sería muy confuso
 
-C) Si, la visualizacion funciona de forma eficaz y es clara ya que logra representar los datos necesarios correctamente. 
+Si, la visualizacion funciona de forma eficaz y es clara ya que logra representar los datos necesarios correctamente. 
+Con otra marca como dot, no se logra ver realmente la cantidad total de horas de misiones, quizás sirve para representar  
+otro tema, como por ejemplo la cantidad de misones de x cantidad de horas. Tiene otro foco.
 
 Ejemplo 2:
-marca: dot
-propiedad: mision hrs
-canal: posición
+marca: linea (barras verticales)
+atributo: eva mision hrs
+canal: posición vertical y tamaño
 
-D) 
+En el mismo gráfico visualizamos el atributo nacionalidad, con la misma marca y el canal de color y posicion horizontal
+Intentamos agregar la marca dot para visualizar el género, pero la visualizacion generada es incomprensible
+
+La visualizacion es buena, pero con otra marca como área, no tiene sentido, no puede verse de manera comprensible, para 
+magnitudes lo mejor parece ser barras
+
 
 Ejemplo 3: 
-marca: barras verticales
-propiedad: pais
-canal: tamaño 
+marca: dots
+propiedad: mision hs
+canal: posicion horizontal 
+
+Osbervamos el atributo genero con la misma marca y el canal color
+Tratamos de agregar otra marca dot para el atributo status pero denuevo, la visualizacion no es clara
+Usando la marca barras, la visualizacion se vuelve mucho menos clara, ya que denota una magnitud en el eje y que no se posee
+
 
 Ejemplo 4:
 marca: dot
-propiedad: pais
-canal: tamaño
+propiedad: edad_mision
+canal: posición(horizontal)
+
+Observamos el atributo mision_hs con la misma marca y como canal la magnitud
+Intentamos agregar otra marca como barras pero las escalas son muy distintas y se supoerpone la información
+
+La visualizacion es considerablemente clara, pero al visualizar ese atributo con la macra barra en vez de dot,
+vemos que es aún más claro y que ademas se puede mostrar otros atributos con facilidad como género
 
 
 
-
-
-
+NOS FALTA:
+-lo de que queden en orden los paises
+-en el 4, que los circulos se sumen y que tenga alguna referencia de qué representan
