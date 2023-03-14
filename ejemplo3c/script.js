@@ -3,7 +3,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
     marks: [ //marcas del plot
-      Plot.barX(data, { //elijo la marca punto para representar cada identidad
+      Plot.barX(data, { //elijo la marca barra para representar cada identidad
         x: 'mision_hs', 
         fill: 'genero',
       }),

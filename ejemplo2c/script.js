@@ -4,7 +4,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
 
     marks: [ //marcas del plot
-      Plot.areaY(data, { //elijo la marca punto para representar cada identidad
+      Plot.areaY(data, { //elijo la marca area para representar cada identidad
         x: 'nacionalidad', 
         y: 'eva_mision_hs',
         fill: 'nacionalidad',

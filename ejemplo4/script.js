@@ -5,7 +5,10 @@ d3.csv('./astronautas.csv', d3.autoType).then(data => {
     marks: [ //marcas del plot
       Plot.dot(data, { //elijo la marca punto para representar cada identidad
         x: 'edad_mision', 
-        r: 'eva_mision_hs',
+        y: 'eva_mision_hs',
+        fill: 'status',
+        sort: 'status',
+        stroke: 'status', 
       }),
     ],
     width: 5000,

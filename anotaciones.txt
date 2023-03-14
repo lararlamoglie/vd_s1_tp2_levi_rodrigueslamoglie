@@ -57,6 +57,9 @@ Intentamos agregar otra marca como barras pero las escalas son muy distintas y s
 La visualizacion es considerablemente clara, pero al visualizar ese atributo con la macra barra en vez de dot,
 vemos que es aún más claro y que ademas se puede mostrar otros atributos con facilidad como género
 
+Podemos ver que en el ultimo ejemplo al agregar un atributo con la misma marca anterior se pierde 
+parte de la información anterior ya que se dejan de ver la codificación con colores anterior. 
+Es por esto que para visualizar otro atributo en lineas generales nos parece mejor agregar una marca al grafico. 
 
 
 NOS FALTA:
