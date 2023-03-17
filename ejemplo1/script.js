@@ -9,12 +9,30 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     ],
     y: {
       domain: d3.sort(data, (a, b) => d3.descending(a.mision_hs, b.mision_hs)).map(d => d.ocupacion),
+      labelOffset: 200,
+      label: 'Ocupación',
+      fontSize: 100,
     },
     x: {
       grid: true,
+      labelOffset:40,
+      label: 'Misión en horas'
     },
-    height: 300,
-    marginLeft: 150
+    style:{
+      fontFamily: 'serif',
+      fontSize: 14,
+      //background: 'hsl(0,100%,50%)'
+      color: 'black',
+      padding: '100px',
+    },
+    width: 700,
+    height: 500,
+    marginLeft: 200,
+    marginBottom: 200,
+    marginRight: 70,
+    color:{
+      scheme: 'orrd'
+    }
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart) //agregamos el grafico a index.html

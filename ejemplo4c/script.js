@@ -10,6 +10,7 @@ d3.csv('./astronautas.csv', d3.autoType).then(data => {
         sort: 'status',
         stroke: 'status',
       }),
+      Plot.text(data, {x: 'edad_mision', y:'eva_mision_hs', text:'edad_mision', dx: 100 })
     ],
     width: 5000,
     height: 500,
@@ -18,6 +19,9 @@ d3.csv('./astronautas.csv', d3.autoType).then(data => {
     nice: true,
     zero: true,
     grid: true,
+    x:{
+      tickFormat: (d) => 'Edad ${d}',
+    }
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart) //agregamos el grafico a index.html
