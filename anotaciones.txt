@@ -1,4 +1,4 @@
-Parte 69
+Parte 1
 A) Tipologías:
 El dataset es una tabla de items y atributos
 Atributos: categóricos: género, nacionalidad, status, ocupacion, 
@@ -65,3 +65,10 @@ Es por esto que para visualizar otro atributo en lineas generales nos parece mej
 NOS FALTA:
 -lo de que queden en orden los paises
 -en el 4, que los circulos se sumen y que tenga alguna referencia de qué representan
+
+
+Graficos más esteticos: 
+-graf ejemplo1
+-graf ejemplo 1c
+-graf ejemplo 5
+-graf ejemplo 6
