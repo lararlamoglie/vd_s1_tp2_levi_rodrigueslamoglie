@@ -68,7 +68,7 @@ NOS FALTA:
 
 
 Graficos más esteticos: 
--graf ejemplo1
+-graf ejemplo 7
+-graf ejemplo 2 
 -graf ejemplo 1c
--graf ejemplo 5
--graf ejemplo 6
+-graf ejemplo 8
