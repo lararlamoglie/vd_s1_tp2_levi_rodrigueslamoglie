@@ -33,7 +33,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       type: "categorical",
       scheme: 'puor',
       legend: true,
-    }
+    },
   })
 
   // Agregamos chart al div#chart de index.html

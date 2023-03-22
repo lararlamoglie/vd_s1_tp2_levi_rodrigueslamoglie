@@ -5,22 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chart 01 - X</title>
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Noto+Sans&display=swap" rel="stylesheet">    <style>
       #chart{
         overflow-y:auto;
       }
       #chart svg{
         max-width: initial;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
       h1{
         text-align: center;
         margin-left:auto;
         color: black;
-        font-family: 'Merriweather', serif;
-       
-
-
+        font-family: 'Barlow', sans-serif;
       }
 
 
@@ -28,12 +26,15 @@
         font-weight: normal;
         text-align: center;
         font-size: 1.1em;
+        font-family: 'Barlow', sans-serif;
       }
 
 
       h6 {
-        font-size: .9em;
+        text-align: center;
+        font-size: .8em;
         font-weight: normal;
+        font-family: 'Barlow', sans-serif;
         margin: 0;
       }
 
@@ -46,33 +47,13 @@
         margin-top: 2em;
       }
     </style>
- 
+  </head>
    
-   
-    <h1> Horas de misiónes espaciales llevadas a cabo por año y género</h1>
-   
+   <body>
+    <h1> Total de horas de misiones espaciales según año y género</h1>
 
-
-    <h4>
-      Cantidad de horas de misiónes espaciales llevadas a cabo entre 2010 y 2019 por género.
-     
-    </h4>
+    <h4>Cantidad de horas de misiónes espaciales llevadas a cabo entre 2010 y 2019 por género.</h4>      
    
-    </body>
-    <h6>
-      <p>
-        Fuente de datos: astronautas.csv. Son más de 150 registros, en donde cada fila representa un astronauta participante de una misión espacial.
-      </p>
-      <p>
-        Autores: NASA ( Estados Unidos)  y Roscosmos (Rusia) entre otros sitios.    
-      </p>
-    </h6>
-   
- 
-    <body>
-   
-   
-
 
     <div id="chart"></div>
 
@@ -81,6 +62,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
     <script src="script.js"></script>
+
+    <h6>Fuente de datos: astronautas.csv.</h6>
+    <h6>Autores: NASA ( Estados Unidos)  y Roscosmos (Rusia) entre otros sitios.</h6>
+
+
   </body>
 </html>
 
