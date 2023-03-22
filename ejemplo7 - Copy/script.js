@@ -12,6 +12,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     inset: 10,
     grid: true,
+    
     x: {
       label: "Año →",
       tickFormat: "",
@@ -33,7 +34,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       type: "categorical",
       scheme: 'puor',
       legend: true,
-    }
+    },
+    style: {
+      fontSize: 12.5,
+    },
+    marginBottom: 55,
   })
 
   // Agregamos chart al div#chart de index.html
