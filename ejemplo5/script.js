@@ -1,4 +1,5 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
+  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Reino Unido'].includes(d.nacionalidad));
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
@@ -13,7 +14,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         label: "Año de misión",
       },
       marks: [
-        Plot.text(['Misiones espaciales por año'], {frameAnchor:"top", fontSize: 18,},),
+        //Plot.text(['Misiones espaciales por año'], {frameAnchor:"top", fontSize: 18,},),
         Plot.axisX({anchor: "bottom", 
           tickFormat: "", 
           labelOffset: 35,
@@ -39,7 +40,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       marginRight: 65,
       insetLeft: 5,
       insetBottom: 5,
-      insetTop: 40,
+      insetTop: 0,
       style:{
         fontFamily: "sans-serif",
         fontSize: 12,

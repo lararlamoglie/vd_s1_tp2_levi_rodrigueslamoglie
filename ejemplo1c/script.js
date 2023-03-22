@@ -3,7 +3,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
     marks: [
-      Plot.text(['Horas de misión en función de ocupación y género'], {frameAnchor:"top", fontSize: 16,}, ),//marcas del plot //marcas del plot
+      //Plot.text(['Horas de misión en función de ocupación y género'], {frameAnchor:"top", fontSize: 16,}, ),//marcas del plot //marcas del plot
       Plot.dot(data, { //elijo la marca punto para representar cada identidad
         x: 'mision_hs', y: 'ocupacion', r: 3.5,
         //stroke: 'genero',
@@ -30,17 +30,17 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     style:{
       fontFamily: 'sans-serif',
       fontSize: 12,
-      background: 'hsl(111, 26%, 81%)',
+      background: 'hsl(111, 26%, 87%)',
       color: 'black',
       padding: '100px',
     },
-    height: 270,
-    width: 1000,
+    height: 250,
+    width: 800,
     marginLeft: 170,
     marginRight: 110,
-    marginBottom:40,
+    marginBottom:20,
     marginTop: 0,
-    insetTop: 30,
+    insetTop: 0,
 
   })
   // Agregamos chart al div#chart de index.html

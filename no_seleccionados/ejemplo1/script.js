@@ -11,12 +11,15 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       fontSize: 100,
     },
     marks: [ //marcas del plot
-      Plot.text(['Horas de misión por ocupación'], {frameAnchor: "top", fontSize: 18,},),
+      //Plot.text(['Horas de misión por ocupación'], {frameAnchor: "top", fontSize: 18,},),
       Plot.axisX({anchor: "bottom", 
       //tickFormat: "", 
       labelOffset: 17,
       tickSize: 5,}),
-      Plot.barX(data, Plot.groupY({x: "sum"}, {x: "mision_hs", y: "ocupacion", fill:'ocupacion', sort: 'sum',})),
+      Plot.barX(data, Plot.groupY({x: "sum"}, {x: "mision_hs", 
+      y: "ocupacion", 
+      fill:'ocupacion', 
+      sort: {y: "x", reverse:false},})),
       Plot.ruleX[0],
       Plot.gridX({insetTop:80,}),
     ],
@@ -36,7 +39,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     marginBottom: 200,
     marginTop: 10,
     marginRight: 130,
-    insetTop: 25,
+    insetTop: 0,
     
     color:{
       type: "categorical",

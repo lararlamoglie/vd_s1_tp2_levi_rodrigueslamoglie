@@ -5,10 +5,10 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
 
     marks: [ 
-      Plot.text(['Horas de misión (eva) por nacionalidad'], {
-        frameAnchor:"top", 
-        fill: "black",
-        fontSize: 18,},),//marcas del plot
+      //Plot.text(['Horas de misión (eva) por nacionalidad'], {
+      //  frameAnchor:"top", 
+      //  fill: "black",
+      //  fontSize: 18,},),//marcas del plot
       Plot.barY(data, Plot.groupX({y: "sum"}, {x:"nacionalidad", y: "eva_mision_hs", fill: d => d.nacionalidad === "EE.UU." ? "#000073" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#990000" : "#D1C9C8"),})),
       Plot.axisX({labelAnchor: "right", 
         labelOffset: 18, 
@@ -39,7 +39,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       grid: true,
       domain: [0,700]
     },
-    width: 1300,
+    width: 1200,
     height: 400,
     marginLeft: 160,
     marginRight: 70,

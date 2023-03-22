@@ -13,7 +13,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         label: "Misión en horas (eva)",
       },
       marks: [
-        Plot.text(['Horas de misión por edad'], {frameAnchor:"top", fontSize: 16,},),
+        //Plot.text(['Horas de misión por edad'], {frameAnchor:"top", fontSize: 16,},),
         Plot.dot(data, Plot.binX({r: "count"}, {x: 'eva_mision_hs', y:'edad_mision', fill:'edad_mision'})),
         Plot.axisX(d3.ticks(0,40,10),{anchor: "bottom", 
         tickFormat: "", 
