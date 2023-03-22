@@ -1,39 +1,38 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
-  let datafemale = data.filter(
-    d => d.genero === "femenino"
+/*  let datafemale = data.filter(
+    d => d.genero === "Femenino"
   )
 
   let datamasc = data.filter(
-    d => d.genero === "masculino"
+    d => d.genero === "Masculino"
   )
-  
+*/  
   let chart = Plot.plot({
     inset: 10,
     grid: true,
     x: {
-      label: "Edad →"
+      label: "Año →",
+      tickFormat: "",
     },
     y: {
-      label: "↑ Mision en hs"
+      label: "↑ Horas de misión",
+      tickFormat: "s",
     },
     marks: [
-      Plot.lineY(datafemale,Plot.groupX({y: "sum"},{y:"mision_hs", x:"anio_mision",
-      stroke: "red",
-      strokeWidth: 2.5,
-    }),
-    ),
-      Plot.lineY(datamasc,Plot.groupX({y: "sum"},{y:"mision_hs", x:"anio_mision",
-      stroke: "green",
-      strokeWidth: 2.5,
-    }),
-    ),
-      //Plot.text(data, {filter: d => d.edad_mision % 5 === 0, x: "edad_mision", y: "mision_hs", text: d => `${d.edad_mision}`, dy: -8})
+      Plot.lineY(data,Plot.groupX({y: "sum"},{
+        y:"mision_hs", 
+        x:"anio_mision", 
+        z: "genero",
+        stroke: "genero",
+        strokeWidth: 3,
+    }),),
     ],
     color:{
       type: "categorical",
-      scheme: 'blues',
+      scheme: 'puor',
+      legend: true,
     }
   })
 
