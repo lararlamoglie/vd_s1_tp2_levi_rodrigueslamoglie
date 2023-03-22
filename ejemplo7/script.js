@@ -13,7 +13,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     inset: 10,
     grid: true,
     x: {
-      label: "Edad →"
+      label: "Años →"
     },
     y: {
       label: "↑ Mision en hs"
@@ -34,6 +34,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     color:{
       type: "categorical",
       scheme: 'blues',
+    },
+    style:{
+      fontSize: 12.5,
     }
   })
 
