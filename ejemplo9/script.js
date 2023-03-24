@@ -16,8 +16,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     height: 250,
     width: 700,
-    marginLeft: 120,
-    marginBottom: 40,
+    marginLeft: 30,
     x: {
       tickFormat: "",
       label: 'Años',
