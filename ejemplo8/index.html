@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Chart 01 - X</title>
     <style>
       #chart{
@@ -12,11 +15,62 @@
       #chart svg{
         max-width: initial;
       }
-    </style>
-  </head>
-  <body>
+      
+     
     
+      h1{
+        text-align: center;
+        margin-left:auto;
+        color: black;
+        font-family: 'Roboto Condensed', sans-serif;
+       
+
+
+      }
+
+
+      h4 {
+        font-weight: normal;
+        text-align: center;
+        font-size: 1.1em;
+      }
+
+
+      h6 {
+        font-size: .9em;
+        font-weight: normal;
+        margin: 0;
+      }
+
+
+      p {
+        margin: 0;
+      }
+     
+    </style>
+ 
+   
+   
+    <h1> Horas de misiones espaciales realizadas, por edad y por pais. </h1>
+   
+
+
+    <h4>
+      Cantidad de horas de misiones espaciales entre enero 2010 y diciembre 2019 por edad y por pais.  
+     
+    </h4>
+   
+    </body>
+    
+   
+ 
+    <body>
+   
+   
+
+
     <div id="chart"></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
@@ -24,3 +78,12 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<h6>
+  <p>
+    Fuente de datos: astronautas.csv. Son más de 150 registros, en donde cada fila representa un astronauta participante de una misión espacial.
+  </p>
+  <p>
+    Autores: NASA ( Estados Unidos)  y Roscosmos (Rusia) entre otros sitios.    
+  </p>
+</h6>

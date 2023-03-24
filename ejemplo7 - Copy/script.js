@@ -20,6 +20,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     y: {
       label: "↑ Horas de misión",
       tickFormat: "s",
+      labelOffset: 35,
+      
     },
     marks: [
       Plot.lineY(data,Plot.groupX({y: "sum"},{
@@ -34,11 +36,20 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       type: "categorical",
       scheme: 'puor',
       legend: true,
+      marginLeft: 100,
+      
     },
     style: {
       fontSize: 12.5,
     },
+    fx:{
+      padding: 100,
+    },
     marginBottom: 55,
+    marginLeft: 200,
+    marginTop: 30,
+    marginRight: 30,
+    
   })
 
   // Agregamos chart al div#chart de index.html
