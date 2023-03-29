@@ -23,12 +23,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       labelOffset: 30,
       axis: "top",
       grid: true,
-      domain: [2010, 2020]
+      domain: [2010, 2020],
       //tickFormat: formatYear
+      color: "white",
     },
     y: {
       axis: null,
       labelOffset: 30,
+      color: "white",
       domain: d3.sort(countriesYears, d=> d.minYear).map(d => d.nacionalidad)
     },
     marks: [
@@ -39,17 +41,18 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         fill: "nacionalidad",
       }),
       Plot.text(countriesYears, {
-        x: "maxYear",
+        x: "minYear",
         y: "nacionalidad",
         text: "nacionalidad",
-        textAnchor: "minYear",
-        dx: 18 }),
+        //textAnchor: "middle",
+        //color: "black",
+        dx: 40 }),
     ],
     color:{
       type: "categorical",
       legend: true,
       //domain: d3.range(10).map(d => `Category ${d + 1}`), 
-      range: [
+      /*range: [
         "#D7A9A8",
         "#A0C3D2",
         "#F1C8B3",
@@ -58,14 +61,15 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         "#F9E79F",
         "#E2D7F2",
         "#C8E6C9"
-      ],
+      ],*/
+      range: ['#ea5545', '#f46a9b', '#ef9b20', '#edbf33', '#ede15b', '#bdcf32', '#87bc45', '#27aeef', '#b33dc6'],
       legend: false,
     },
     style:{
       fontFamily: 'sans-serif',
       fontSize: 10,
-      background: 'hsl(0, 0%, 100%)',
-      color: 'black',
+      background: 'hsl(0, 0%, 0%)',
+      color: 'white',
       padding: '1px',
     },
    
