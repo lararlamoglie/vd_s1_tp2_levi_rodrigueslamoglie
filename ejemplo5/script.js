@@ -1,17 +1,10 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Reino Unido'].includes(d.nacionalidad));
-  data1 = data.filter(d => [2010].includes(d.anio_mision));
-  data2 = data.filter(d => [2011].includes(d.anio_mision));
-  data3 = data.filter(d => [2012].includes(d.anio_mision));
-  data4 = data.filter(d => [2013].includes(d.anio_mision));
-  data5 = data.filter(d => [2014].includes(d.anio_mision));
-  data6 = data.filter(d => [2015].includes(d.anio_mision));
-
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
       y: {
-        grid: true,
+        
         labelOffset: 60,
         label: "Cantidad de \n misiones" 
       },
@@ -19,7 +12,6 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         tickFormat: "",
         type: "linear",
         label: "Año de misión",
-        //round: true,
       },
       marks: [
         //Plot.text(['Misiones espaciales por año'], {frameAnchor:"top", fontSize: 18,},),
@@ -32,18 +24,15 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.axisY({labelAnchor:"center",
           labelOffset: 70,
       }),
-        Plot.barY(data,{
-          x: "anio_mision",
-          y
-        })
+        Plot.rectY(data, Plot.binX({y: "count"}, {x: "anio_mision", fill:'nacionalidad', sort: 'nacionalidad',})),
       ],
       color:{
         type: "categorical", 
-        scheme: 'set2',
+        scheme: 'set3',
         nice: true, 
         legend: true,
       },
-      width: 700,
+      width: 550,
       height: 500,
       marginTop: 30,
       marginBottom: 50,
@@ -62,4 +51,3 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart) //agregamos el grafico a index.html
 })
-

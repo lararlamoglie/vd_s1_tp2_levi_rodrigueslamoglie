@@ -19,11 +19,10 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     marginLeft: 30,
     x: {
       tickFormat: "",
-      label: 'Años',
       labelOffset: 30,
       axis: "top",
-      grid: true,
-      domain: [2010, 2020],
+      
+      domain: [2009, 2020],
       //tickFormat: formatYear
       color: "white",
     },
@@ -34,11 +33,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       domain: d3.sort(countriesYears, d=> d.minYear).map(d => d.nacionalidad)
     },
     marks: [
+      Plot.rectX([2009]),
+      Plot.rectX([2020]),
       Plot.barX(countriesYears, {
         x1: "minYear",
         x2: "maxYear",
         y: "nacionalidad",
         fill: "nacionalidad",
+       
       }),
       Plot.text(countriesYears, {
         x: "minYear",
@@ -51,6 +53,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     color:{
       type: "categorical",
       legend: true,
+      background: 'black',
       //domain: d3.range(10).map(d => `Category ${d + 1}`), 
       /*range: [
         "#D7A9A8",

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">     
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
     <title>Ej1</title>
     <style>
       #chart{
@@ -11,30 +17,43 @@
       }
       #chart svg{
         max-width: initial;
+        background: black, 
       }
-
-      body{
+      body {
         background-color: black;
       }
-
       h1{
         color: white;
-        font-family: "Arial";
+        font-family: 'Barlow', sans-serif;
         font-style: regular;
-        font-weight: bold;
+        font-weight: regular;
+        background: black; 
+        text-align: center;
+        margin-left: 60px;
       }
-      h4{
+      h4 {
+        text-align: center;
         color: white;
-        font-family: "Arial", serif;
-        font-style: italic;
-        font-weight: lighter;
-        margin-top: -10px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        font-size: 1.2em;
+        background: black;
+        margin-left: 72px;
+
       }
+
       h6{
         color: white;
-        font-family: "Arial";
-        font-style: italic;
-        font-weight: lighter;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 200;
+        font-size: 1.2 em;
+        background: black; 
+        text-align: left;
+        margin-left: 255px;
+      }
+
+      div{
+        margin-left: 250px;
       }
 
     </style>
@@ -52,6 +71,8 @@
 
 
     <div id="chart"></div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
