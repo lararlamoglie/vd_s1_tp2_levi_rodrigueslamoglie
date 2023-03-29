@@ -14,8 +14,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Guardamos el svg generado en la variable chart
 
   let chart = Plot.plot({
-    height: 250,
-    width: 700,
+    height: 300,
+    width: 800,
     marginLeft: 30,
     x: {
       tickFormat: "",
