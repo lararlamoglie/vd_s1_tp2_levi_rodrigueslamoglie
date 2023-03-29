@@ -4,7 +4,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
       y: {
-        grid: true,
+        
         labelOffset: 60,
         label: "Cantidad de \n misiones" 
       },
@@ -32,8 +32,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         nice: true, 
         legend: true,
       },
-      width: 650,
-      height: 600,
+      width: 550,
+      height: 500,
       marginTop: 30,
       marginBottom: 50,
       marginLeft: 80,

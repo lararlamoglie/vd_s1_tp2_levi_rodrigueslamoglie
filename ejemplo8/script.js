@@ -20,8 +20,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           y: "mision_hs", 
           fill: "nacionalidad",
           stroke: "nacionalidad",
-          r: 3.4,
-          fillOpacity: 0.5,
+          r: 6,
+          fillOpacity: 1,
         })
       ),
     ],
@@ -31,7 +31,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       domain: [1,10900]
     },
     x: {
-      grid: true,
+      
       label: '→ Edad',
       labelOffset: 18,
       domain: [30,60]
@@ -39,13 +39,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     color:{
       type: "categorical",
       scheme:'warm',
-      legend: true,
+      
     },
+
     style:{
       fontFamily: 'sans-serif',
       fontSize: 12,
-      background: 'hsl(0, 0%, 100%)',
-      color: 'black',
+      background: 'hsl(0, 100%, 0%)',
+      color: 'white',
       padding: '1px',
     },
     marginLeft: 50,
@@ -56,7 +57,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     insetRight: 0,
     width: 900,
     height: 400,
-    grid: true,
+    
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart) //agregamos el grafico a index.html
