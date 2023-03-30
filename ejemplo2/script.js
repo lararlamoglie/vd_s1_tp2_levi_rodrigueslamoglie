@@ -13,7 +13,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       round: true,
     },
     marks: [ 
-      Plot.barY(data, Plot.binY({y: "count"}, {
+      Plot.barX(data, Plot.binY({y: "count"}, {
         x:"ocupacion", 
         fill: d => d.nacionalidad === "EE.UU." ? "#000073" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#990000" : "#D1C9C8"),
         stroke: d => d.nacionalidad === "EE.UU." ? "#000073" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#990000" : "#D1C9C8"),

@@ -1,17 +1,18 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
-  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Alemania', 'China', 'Reino Unido', 'Italia', 'Canada'].includes(d.nacionalidad));
-  const dataByCountry = d3.group(data, d => d.nacionalidad);
-  // create a new array with one element per country, containing the country name, smallest year and greatest year
-  const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
-    const minYear = d3.min(values, d => d.anio_mision);
-    const maxYear = d3.max(values, d => d.anio_mision);
-    return { nacionalidad, minYear, maxYear };
-  });
+data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Alemania', 'China', 'Reino Unido', 'Italia', 'Canada'].includes(d.nacionalidad));
+const dataByCountry = d3.group(data, d => d.nacionalidad);
+// create a new array with one element per country, containing the country name, smallest year and greatest year
+const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
+  const minYear = d3.min(values, d => d.anio_mision);
+  const maxYear = d3.max(values, d => d.anio_mision);
+  return { nacionalidad, minYear, maxYear };
+})
 
   let csvContent = d3.csvFormat(countriesYears);
   console.log(countriesYears)
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
+
 
   let chart = Plot.plot({
     height: 300,

@@ -1,12 +1,67 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
-  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Reino Unido'].includes(d.nacionalidad));
-  console.log(data) //ver en pantalla
+  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Alemania', 'China', 'Reino Unido', 'Italia', 'Canada'].includes(d.nacionalidad));
+  const dataByCountry = d3.group(data, d => d.nacionalidad);
+  // create a new array with one element per country, containing the country name, smallest year and greatest year
+  const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
+    const minYear = d3.min(values, d => d.anio_mision);
+    const maxYear = d3.max(values, d => d.anio_mision);
+    return { nacionalidad, minYear, maxYear };
+  })
+  
+    let csvContent = d3.csvFormat(countriesYears);
+    console.log(countriesYears)
+    console.log(data) //ver en pantalla
+    // Guardamos el svg generado en la variable chart
+  
+    let objData = {}
+    data.forEach(mission => {
+      if (objData[mission.nacionalidad] != undefined) {
+        objData[mission.nacionalidad] += 1;
+        return;
+      } else {
+        objData[mission.nacionalidad] = 0;
+      }
+  })
+  
+    objData = Object.fromEntries(
+      Object.entries(objData).map(([key, value]) => [key, (value / data.length)*100])
+    )
+    console.log(objData)
+/*
+  const dataByYear = d3.group(data, d => d.nacionalidad);
+  const dataByYear = Array.from(dataByYear, ([nacionalidad, values]) => {
+  
+
+  let csvContent2 = d3.csvFormat(dataByYear);
+  console.log(dataByYear)
+  console.log(data) 
+  
+  //ver en pantalla
   // Guardamos el svg generado en la variable chart
+
+   //return { count(dataByYear)/(sum(count))};
+ //ver en pantalla
+  // Guardamos el svg generado en la variable chart
+
+  
+  //var data = data.filter(d=> ['EE.UU.', 'U.S.S.R/Rusia'].includes(d.mision_hrs, d.nacionalidad));
+  //console.log(data)
+
+
+  //ver en pantalla
+  // Guardamos el svg generado en la variable chart
+
+*/
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
-      y: {
+    
+    
+    
+    y: {
         
         labelOffset: 60,
         label: "Cantidad de \n misiones" 
+        
+
       },
       x:{
         tickFormat: "",
@@ -32,11 +87,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         nice: true, 
         legend: true,
       },
-<<<<<<< HEAD
       width: 550,
-=======
       width: 700,
->>>>>>> 1422bf75f00d8898aca03c65087a6486ba79e69f
       height: 500,
       marginTop: 30,
       marginBottom: 50,

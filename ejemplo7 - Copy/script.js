@@ -11,18 +11,18 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 */  
   let chart = Plot.plot({
     inset: 10,
-    grid: true,
+    //grid: true,
     
     x: {
-      label: "Año →",
       tickFormat: "",
-      color: 'white',
+      
     },
     y: {
       label: "↑ Horas de misión",
       tickFormat: "s",
       labelOffset: 35,
-      color: 'white',
+      
+      
       
     },
     marks: [
@@ -40,13 +40,14 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       legend: true,
       marginLeft: 100,
       background: 'black',
-      color: 'white', 
+      
       
     },
     style: {
       fontSize: 12.5,
-      background: 'hsl(0, 100%, 0%)'
-      color: 'white',
+      background: 'hsl(0, 100%, 0%)',
+      color: 'white', 
+      
     },
     fx:{
       padding: 100,
