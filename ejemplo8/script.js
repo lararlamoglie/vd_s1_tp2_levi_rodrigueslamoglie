@@ -7,7 +7,6 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       data: data,
       x: "nacionalidad",
       label: "",
-
     },
     fx:{
       padding: 0.1,
@@ -39,7 +38,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     color:{
       type: "categorical",
       scheme:'warm',
-      
+      legend: false,
     },
 
     style:{

@@ -23,15 +23,19 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
       labelOffset: 30,
       axis: "top",
       
-      domain: [2010, 2020]
+      domain: [2009, 2020],
       //tickFormat: formatYear
+      color: "white",
     },
     y: {
       axis: null,
       labelOffset: 30,
+      color: "white",
       domain: d3.sort(countriesYears, d=> d.minYear).map(d => d.nacionalidad)
     },
     marks: [
+      Plot.rectX([2009]),
+      Plot.rectX([2020]),
       Plot.barX(countriesYears, {
         x1: "minYear",
         x2: "maxYear",
@@ -40,18 +44,19 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
        
       }),
       Plot.text(countriesYears, {
-        x: "maxYear",
+        x: "minYear",
         y: "nacionalidad",
         text: "nacionalidad",
-        textAnchor: "minYear",
-        dx: 18 }),
+        //textAnchor: "middle",
+        //color: "black",
+        dx: 40 }),
     ],
     color:{
       type: "categorical",
       legend: true,
       background: 'black',
       //domain: d3.range(10).map(d => `Category ${d + 1}`), 
-      range: [
+      /*range: [
         "#D7A9A8",
         "#A0C3D2",
         "#F1C8B3",
@@ -60,13 +65,14 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
         "#F9E79F",
         "#E2D7F2",
         "#C8E6C9"
-      ],
+      ],*/
+      range: ['#ea5545', '#f46a9b', '#ef9b20', '#edbf33', '#ede15b', '#bdcf32', '#87bc45', '#27aeef', '#b33dc6'],
       legend: false,
     },
     style:{
       fontFamily: 'sans-serif',
       fontSize: 10,
-      background: 'hsl(0, 100%, 0%)',
+      background: 'hsl(0, 0%, 0%)',
       color: 'white',
       padding: '1px',
     },

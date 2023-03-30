@@ -88,7 +88,10 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         legend: true,
       },
       width: 550,
+<<<<<<< HEAD
       width: 700,
+=======
+>>>>>>> 8a2867430033000d29ca9b124845968e226b836a
       height: 500,
       marginTop: 30,
       marginBottom: 50,
@@ -107,4 +110,3 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart) //agregamos el grafico a index.html
 })
-
