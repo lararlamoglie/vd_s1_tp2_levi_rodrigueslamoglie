@@ -49,7 +49,8 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
         text: "nacionalidad",
         //textAnchor: "middle",
         //color: "black",
-        dx: 40 }),
+        fontSize:11,
+        dx: 50 }),
     ],
     color:{
       type: "categorical",
@@ -66,7 +67,7 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
         "#E2D7F2",
         "#C8E6C9"
       ],*/
-      range: ['#ea5545', '#f46a9b', '#ef9b20', '#edbf33', '#ede15b', '#bdcf32', '#87bc45', '#27aeef', '#b33dc6'],
+      range: ['#1974D2','#66FF00', '#08E8DE', '#FF007F','#FFAA1D','#F21C23', '#DBE600','#922FC2'],
       legend: false,
     },
     style:{

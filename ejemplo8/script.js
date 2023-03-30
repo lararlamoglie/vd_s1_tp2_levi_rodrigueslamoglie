@@ -33,7 +33,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       
       label: '→ Edad',
       labelOffset: 18,
-      domain: [30,60]
+      domain: [30,65]
     },
     color:{
       type: "categorical",
@@ -54,7 +54,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     insetTop: 0,
     insetLeft: 0,
     insetRight: 0,
-    width: 900,
+    width: 1000,
     height: 400,
     
   })
