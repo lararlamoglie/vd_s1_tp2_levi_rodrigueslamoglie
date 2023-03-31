@@ -1,38 +1,52 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
-  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Reino Unido', 'Francia', 'Canada'].includes(d.nacionalidad));
+  data = data.filter(d => ['EE.UU.', 'U.S.S.R/Rusia', 'Japon', 'Italia', 'Alemania', 'China', 'Reino Unido', 'Italia', 'Canada'].includes(d.nacionalidad));
   console.log(data) //ver en pantalla
   // Guardamos el svg generado en la variable chart
   let chart = Plot.plot({ //genera una visualizacion, guarda el gráfico en la variable chart
     x:{
       round: true,
-      label: "Ocupación",
+      label: "",
+      tickFormat: "",
     },
     y:{
-      label: "Cantidad astronautas",
+    label: "Cantidad de \n astronautas",
       grid: true,
       round: true,
+      labelOffset : 90,
+      domain: [0,30],
+      type: "linear",
     },
     marks: [ 
-      Plot.barX(data, Plot.binY({y: "count"}, {
-        x:"ocupacion", 
-        fill: d => d.nacionalidad === "EE.UU." ? "#000073" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#990000" : "#D1C9C8"),
-        stroke: d => d.nacionalidad === "EE.UU." ? "#000073" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#990000" : "#D1C9C8"),
-
+      Plot.barY(data, Plot.binY({y: "count"}, {
+        x:"anio_mision", 
+        fill: d => d.nacionalidad === "EE.UU." ? "#ffa71a" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#f5009b" : "#00dbeb"),
+        stroke: d => d.nacionalidad === "EE.UU." ? "#ffa71a" : (d.nacionalidad === "U.S.S.R/Rusia" ? "#f5009b" : "#00dbeb"),
+        round: true,
+        //fill: "nacionalidad",
+        //stroke: "nacionalidad",
+        padding: "20px",
       })),
-      Plot.ruleY([0]),
     ],
-    width: 700,
-    height: 500,
-    marginLeft: 160,
-    marginRight: 70,
-    marginTop:30,
+    width: 800,
+    height: 380,
+    marginLeft: 100,
+    marginRight: 0,
+    marginTop: 10,
     marginBottom: 50,
+    padding: 0.2,
     line: true,
-    nice: true,
+    nice: false,
     zero: true,
     insetTop: 0,
+    aspectRatio: 2000,
     style:{
-      color: "grey",
+      color: "white",
+      background: "hsl(0, 100%, 0%)",
+      fontSize: 10,
+    },
+    color:{
+      range:["#a323d1","#00dbeb", "#ffa71a","#f5009b"],
+      legend: false,
     }
   })
   // Agregamos chart al div#chart de index.html
