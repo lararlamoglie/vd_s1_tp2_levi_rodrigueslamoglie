@@ -10,6 +10,26 @@
 
     <title>Chart 01 - X</title>
     <style>
+      .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #981aff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #ff9100;
+    }
+    /* Other styles */
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Barlow', sans-serif;
+    }
       #chart{
         overflow-y:auto;
       }
@@ -19,6 +39,7 @@
       
      body{
       background-color: black;
+      color: white
      }
     
       h1{
@@ -26,28 +47,29 @@
         margin-left:auto;
         color: white;
         font-family: 'Barlow', sans-serif;
-
+        margin-top: -10px;
       }
 
       h4 {
-        width: 800px;
+        width: 700px;
         text-align: center;
         font-size: 1.0em;
         color: white; 
         font-family: 'Barlow', sans-serif;
         font-weight: 100;
-        margin-left: 230px;
+        margin-left: 268px;
       }
       
 
       h6 {
         color: white;
-        font-size: .8em;
+        font-size: .7em;
         font-weight:normal ;
         font-family: 'Barlow', sans-serif;
         font-weight: 100;
-        margin-left: 160px;
-       
+        margin-left: 260px;
+        margin-top: -10px;
+        width: 760px;
       }
 
 
@@ -56,19 +78,19 @@
       }
      
       div{
-        margin-left: 145px;
+        margin-left: 195px;
         margin-top: 30px;
       }
 
     </style>
  
+    <a href="http://127.0.0.1:3000/index.html" class="button"> Menú</a> <p></p>
    
-   
-    <h1>Amplia variedad en la distribución de horas de misión según edad</h1>
+    <h1>Superioridad de Rusia y EE.UU. en el total de astronautas</h1>
    
 
 
-    <h4>En el gráfico se puede observar como Italia y Rusia poseen distribuciones con mayor similitud, mientras que EE.UU. y Japón muestran menor regularidad.     
+    <h4>En el gráfico se puede observar como <mark style="color:#ffa71a; background-color: black;font-weight: bold;"> EE.UU.</mark> y <mark style="color:#f5009b; background-color: black; font-weight: bold;">Rusia</mark> poseen la mayor cantidad de astronautas, en comparación a los <mark style="color:#00dbeb; background-color: black; font-weight: bold;">otros</mark> países en la carrera espacial. EE.UU. solía llevar la delantera, pero con el paso del tiempo se emparejó con Rusia.  
     </h4>
    
     </body>
@@ -93,10 +115,10 @@
 <h6>
   <p>
     Fuente de datos: astronautas.csv. 
-    Son más de 150 registros, en donde cada fila representa un astronauta participante de una misión espacial.
-    Datos extraídos de la NASA ( Estados Unidos)  y Roscosmos (Rusia) entre otros sitios. 
+    Son más de 150 registros, en donde cada fila representa un astronauta participante de una misión espacial. 
+    Datos extraidos de la NASA ( Estados Unidos)  y Roscosmos (Rusia) entre otros sitios. 
   </p>
   <p>
-    Autores:   Lara Rodrigues La Moglie y Chantal Levi. 
+    Autores:  Lara Rodrigues La Moglie y Chantal Levi. 
   </p>
 </h6>
