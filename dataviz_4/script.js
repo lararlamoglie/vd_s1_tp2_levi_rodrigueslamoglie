@@ -57,17 +57,18 @@ const countriesYears = Array.from(dataByCountry, ([nacionalidad, values]) => {
       legend: true,
       background: 'black',
       //domain: d3.range(10).map(d => `Category ${d + 1}`), 
-      /*range: [
+      /*range: [   '#1974D2'
         "#D7A9A8",
         "#A0C3D2",
         "#F1C8B3",
         "#BAA8D7",
         "#B8D8D8",
         "#F9E79F",
-        "#E2D7F2",
-        "#C8E6C9"
+        "#E2D7F2", 
+        "#C8E6C9"   '#FF007F'
+        '#922FC2'
       ],*/
-      range: ['#1974D2','#66FF00', '#08E8DE', '#FF007F','#FFAA1D','#F21C23', '#DBE600','#922FC2'],
+      range: ['#66FF00','#1974D2', '#08E8DE', '#FFAA1D','#922FC2','#F21C23', '#DBE600','#FF007F'],
       legend: false,
     },
     style:{
