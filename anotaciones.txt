@@ -45,7 +45,6 @@ Osbervamos el atributo genero con la misma marca y el canal color
 Tratamos de agregar otra marca dot para el atributo status pero denuevo, la visualizacion no es clara
 Usando la marca barras, la visualizacion se vuelve mucho menos clara, ya que denota una magnitud en el eje y que no se posee
 
-
 Ejemplo 4:
 marca: dot
 propiedad: edad_mision
@@ -62,13 +61,5 @@ parte de la información anterior ya que se dejan de ver la codificación con co
 Es por esto que para visualizar otro atributo en lineas generales nos parece mejor agregar una marca al grafico. 
 
 
-NOS FALTA:
--lo de que queden en orden los paises
--en el 4, que los circulos se sumen y que tenga alguna referencia de qué representan
 
 
-Graficos más esteticos: 
--graf ejemplo 7
--graf ejemplo 2 
--graf ejemplo 1c
--graf ejemplo 8

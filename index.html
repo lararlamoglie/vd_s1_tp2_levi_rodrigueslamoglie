@@ -1,94 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-
-
-    <title>Chart 01 - X</title>
-    <style>
-      #chart{
-        overflow-y:auto;
-      }
-      #chart svg{
-        max-width: initial;
-      }
-      
-     body{
+  <meta charset="UTF-8">
+  <title>Links a las 4 visualizaciones de datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <style>
+    /* Button styles */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffa71a;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #ff9100;
+    }
+    /* Other styles */
+    body {
       background-color: black;
-      color: white
-     }
+      color: white;
+      font-family: 'Barlow', sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+    h4 {
+      text-align: center;
+      display: grid;
+      margin: 0 20px;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 4rem auto;
+    }
+
+    a {
+      transition: all .3s;
+    }
+
+    a:hover {
+      opacity: .8;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Les presentamos 4 visualizaciones de datos: </h1>
+  <h4>
+    <a href="http://127.0.0.1:3000/dataviz_1/index.html" class="button"> Cantidad de astronautas</a> <p></p>
+    <a href="http://127.0.0.1:3000/dataviz_2/index.html" class="button" style="background-color: #fc2bc8;">Desigualdad de género en las misiones</a> <p></p>
+    <a href="http://127.0.0.1:3000/dataviz_3/index.html" class="button" style="background-color: #2dff1a;">Amplia distribución de las horas de misión</a> <p></p>
+    <a href="http://127.0.0.1:3000/dataviz_4/index.html" class="button" style="background-color: #00a9f7;">Lideres de la carrera espacial</a> <p></p>
     
-      h1{
-        text-align: center;
-        margin-left:auto;
-        color: white;
-        font-family: 'Barlow', sans-serif;
+  </h4>
+</body>
+</html>
 
-      }
-
-      h4 {
-        width: 700px;
-        text-align: center;
-        font-size: 1.0em;
-        color: white; 
-        font-family: 'Barlow', sans-serif;
-        font-weight: 100;
-        margin-left: 268px;
-      }
-      
-
-      h6 {
-        color: white;
-        font-size: .7em;
-        font-weight:normal ;
-        font-family: 'Barlow', sans-serif;
-        font-weight: 100;
-        margin-left: 260px;
-        margin-top: -10px;
-       
-      }
-
-
-      p {
-        margin: 0;
-      }
-     
-      div{
-        margin-left: 195px;
-        margin-top: 30px;
-      }
-
-    </style>
- 
-   
-   
-    <h1> Links a las 4 visualizaciones de datos: </h1>
-   
-
-
-    <h4>
-        
-
-          <a href= "http://127.0.0.1:3000/dataviz_1/index.html"> <mark style="color:#ffa71a; background-color: black;font-weight: bold;">  Cantidad de astronautas.  
-          </a>  </p> 
-          <a href= "http://127.0.0.1:3000/dataviz_2/index.html"> <mark style="color:#fc2bc8; background-color: black;font-weight: bold;">  Desigualdad de genero en las misiones.  
-          </a>  </p> 
-          <a href= "http://127.0.0.1:3000/dataviz_3/index.html"> <mark style="color:#2dff1a; background-color: black;font-weight: bold;">  Amplia distribución de horas por edad.
-          </a>  </p> 
-    </h4>
-   
-    </body>
-    
-   
- 
-    <body>
    
    
 
@@ -112,3 +86,4 @@
     
 </body>
 </html>
+
